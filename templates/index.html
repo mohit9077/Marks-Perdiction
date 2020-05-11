@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marks Prediction</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<div class='container'> 
+		<div class='jumbotron'>
+			<div class='container'>
+			   <h1 class='heading'>Marks Prediction</h1>
+			   <p> Type your marks here</p>
+
+     		</div>
+ 		</div>
+ 		   <label><b>How many hours do you Study? : &nbsp;&nbsp; </b></label>
+		   <form class='form-inline' method="POST" action="/"> <!-- here we will manage get request and post request -->
+		   	<input class="form-control" type="text" name="hours" placeholder="Enter the number of hours">
+		   	<button type="submit" class="btn btn-primary"> Get Score </button>
+		   </form>
+
+		   <br>
+		   <br>
+             {% if f_marks %}
+             	<div class="row">
+			        	<div class="col-sm-8">
+			        		<p class="text">Your Marks are : </p>
+			        		<p><b> {{f_marks}} </b></p>
+		        		</div>
+        		</div>
+
+
+			   {% endif %}
+    </div>
+   
+
+   
+</body>
+</html>
