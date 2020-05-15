@@ -1,4 +1,5 @@
 numpy
+sklearn
 pandas
 scikit-learn
 Click==7.0
